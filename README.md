@@ -1,4 +1,4 @@
-# Todo App
+# BookStore App
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
