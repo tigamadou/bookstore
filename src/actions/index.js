@@ -6,9 +6,9 @@ export const defaultBook = {
   title: '',
   category: '',
 };
-export const createBook = (defaultBook) => ({
+export const createBook = (book = defaultBook) => ({
   type: ADD_BOOK,
-  book: defaultBook,
+  book,
 });
 
 export const removeBook = ({ id }) => ({

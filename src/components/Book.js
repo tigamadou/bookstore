@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Book = ({
-  id, title, category, removeBook,
+  id, title, category,
 }) => (
   <tr>
     <td>{id}</td>
@@ -11,9 +11,7 @@ const Book = ({
     <td>
       <button
         type="button"
-        onClick={() => {
-          removeBook(id);
-        }}
+
       >
         Remove
       </button>
@@ -25,14 +23,12 @@ Book.propTypes = {
   id: PropTypes.string,
   title: PropTypes.string,
   category: PropTypes.string,
-  removeBook: PropTypes.func,
 };
 
 Book.defaultProps = {
   id: null,
   title: '',
   category: '',
-  removeBook: null,
 };
 
 export default Book;
