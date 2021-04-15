@@ -8,7 +8,7 @@ const Book = ({
     <td>{id}</td>
     <td>{title}</td>
     <td>{category}</td>
-    <td><button type="button" onClick={() => handleRemoveBook({ id })}>Remove</button></td>
+    <td><button type="button" onClick={() => handleRemoveBook({ id })}>Remove Book</button></td>
   </tr>
 );
 
