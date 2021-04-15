@@ -1,6 +1,6 @@
 import ADD_BOOK from '../actions/index';
 
-const bookReducer = (previousState = [], action) => {
+const booksReducer = (previousState = [], action) => {
   switch (action.type) {
     case ADD_BOOK:
       return [...previousState, action.book];
@@ -9,4 +9,4 @@ const bookReducer = (previousState = [], action) => {
   }
 };
 
-export default bookReducer;
+export default booksReducer;
