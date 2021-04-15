@@ -34,3 +34,5 @@ Book.defaultProps = {
   category: '',
   removeBook: null,
 };
+
+export default Book;
