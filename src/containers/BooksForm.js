@@ -18,8 +18,9 @@ const BooksForm = ({ createBook }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    if (title.trim() === '') return;
     createBook({
-      id: Math.random().toString(36).substr(2, 16),
+      id: Date.now(),
       title: title.trim(),
       category,
     });
