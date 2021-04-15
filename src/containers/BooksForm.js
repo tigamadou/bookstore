@@ -8,7 +8,7 @@ const BooksForm = ({ createBook }) => {
   const [category, setCatagory] = useState('');
   const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
-  const onTitleChange = (e) => {
+  const handleChange = (e) => {
     setTitle(e.target.value);
   };
 
@@ -16,7 +16,7 @@ const BooksForm = ({ createBook }) => {
     setCatagory(e.target.value);
   };
 
-  const onSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (title.trim() === '') return;
     createBook({
@@ -31,12 +31,12 @@ const BooksForm = ({ createBook }) => {
 
   return (
     <div>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           value={title}
           placeholder="Title"
-          onChange={onTitleChange}
+          onChange={handleChange}
         />
         <select value={category} onChange={onCategoryChange}>
           {categories.map((cat) => <option value={cat} key={cat}>{cat}</option>)}
