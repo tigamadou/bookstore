@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { createBook } from '../actions/index';
 
-const BooksForm = () => {
+const BooksForm = ({ createBook }) => {
   const [title, setTitle] = useState('');
   const [category, setCatagory] = useState('');
   const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
@@ -13,9 +16,21 @@ const BooksForm = () => {
     setCatagory(e.target.value);
   };
 
+  const onSubmit = (e) => {
+    e.preventDefault();
+    createBook({
+      id: Math.random().toString(36).substr(2, 16),
+      title: title.trim(),
+      category,
+    });
+
+    setTitle('');
+    setCatagory('Action');
+  };
+
   return (
     <div>
-      <form>
+      <form onSubmit={onSubmit}>
         <input
           type="text"
           value={title}
@@ -31,4 +46,15 @@ const BooksForm = () => {
   );
 };
 
-export default BooksForm;
+const mapDispatchToProps = (dispatch) => ({
+  createBook: (book) => dispatch(createBook(book)),
+});
+
+BooksForm.propTypes = {
+  createBook: PropTypes.func,
+};
+
+BooksForm.defaultProps = {
+  createBook: null,
+};
+export default connect(undefined, mapDispatchToProps)(BooksForm);
