@@ -1,14 +1,11 @@
-const ADD_BOOK = 'ADD_BOOK';
-const generateId = () => Math.random().toString(36).substr(2, 5);
+export const ADD_BOOK = 'ADD_BOOK';
 
-const defaultBook = {
-  id: generateId(),
+export const defaultBook = {
+  id: '',
   title: '',
   category: '',
 };
-const createBook = () => ({
+export const createBook = (defaultBook) => ({
   type: ADD_BOOK,
   book: defaultBook,
 });
-
-export default { ADD_BOOK, createBook };

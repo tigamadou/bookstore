@@ -1,4 +1,4 @@
-import ADD_BOOK from '../actions/index';
+import { ADD_BOOK } from '../actions/index';
 
 const booksReducer = (previousState = [], action) => {
   switch (action.type) {
