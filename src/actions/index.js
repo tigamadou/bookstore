@@ -11,7 +11,7 @@ export const createBook = (book = defaultBook) => ({
   book,
 });
 
-export const removeBook = ({ id }) => ({
+export const removeBook = (book) => ({
   type: REMOVE_BOOK,
-  id,
+  book,
 });
