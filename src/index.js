@@ -11,7 +11,7 @@ const store = storeReducer();
 const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
 for (let i = 0; i < categories.length; i += 1) {
-  store.dispatch(createBook({ id: Math.random().toString(36).substr(2, 16), title: `Book ${i + 1}`, category: categories[i] }));
+  store.dispatch(createBook({ id: Date.now() + i, title: `Book ${i + 1}`, category: categories[i] }));
 }
 
 ReactDOM.render(
