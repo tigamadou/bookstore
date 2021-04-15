@@ -9,3 +9,8 @@ export const createBook = (defaultBook) => ({
   type: ADD_BOOK,
   book: defaultBook,
 });
+
+export const removeBook = ({ id }) => ({
+  type: 'REMOVE_BOOK',
+  id,
+});
