@@ -8,12 +8,12 @@ const Book = (book) => {
 
     <div className="book_card">
       <div className="book_info">
-        <div className="card_left_content">
+        <div className="info_content">
           <div className="book_category">{category}</div>
           <div className="book_title">{title}</div>
           <div className="book_author">Author</div>
         </div>
-        <div className="boo_footer">
+        <div className="info_footer">
           <ul>
             <li><a href="/#">Comments</a></li>
             <li><a href="/#" role="button" onClick={() => handleRemoveBook({ id })}>Remove</a></li>

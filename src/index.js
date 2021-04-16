@@ -10,9 +10,8 @@ const store = storeReducer();
 
 const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
-for (let i = 0; i < categories.length; i += 1) {
-  store.dispatch(createBook({ id: Date.now() + i, title: `Book ${i + 1}`, category: categories[i] }));
-}
+store.dispatch(createBook({ id: Date.now(), title: 'The Hunger Games', category: categories[0] }));
+store.dispatch(createBook({ id: Date.now(), title: 'Dune', category: categories[6] }));
 
 ReactDOM.render(
   <Provider store={store}>
