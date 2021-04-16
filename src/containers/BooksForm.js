@@ -45,7 +45,7 @@ const BooksForm = ({ createBook }) => {
           <select value={category} onChange={onCategoryChange} className="control">
             {categories.map((cat) => <option value={cat} key={cat}>{cat}</option>)}
           </select>
-          <button type="submit">Save Book</button>
+          <button type="submit" className="button">Add Book</button>
         </form>
       </div>
     </div>

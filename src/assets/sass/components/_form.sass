@@ -26,3 +26,28 @@
             outline: none
             -webkit-appearance: none
             -moz-appearance: none
+
+        select.control
+            position: relative
+            &:after
+                content: ''
+                position: absolute
+                right: 0px
+                top: 0px
+
+                width: 15px
+                height: 30px
+                background: red
+        .button
+            width: 184px
+            background: $primaryColor
+            color: $white
+            text-transform: uppercase
+            font-size: 13px
+            font-weight: 500
+            height: 45px
+            font-family: $mainFont
+            font-stretch: normal
+            font-style: normal
+            line-height: normal
+            letter-spacing: 0.5px
