@@ -8,10 +8,11 @@ import { createBook } from './actions/index';
 
 const store = storeReducer();
 
-const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi', 'Economy'];
 
 store.dispatch(createBook({ id: Date.now(), title: 'The Hunger Games', category: categories[0] }));
-store.dispatch(createBook({ id: Date.now(), title: 'Dune', category: categories[6] }));
+store.dispatch(createBook({ id: Date.now() + 1, title: 'Dune', category: categories[6] }));
+store.dispatch(createBook({ id: Date.now() + 1, title: 'Capital in the Twenty-First Century', category: categories[7] }));
 
 ReactDOM.render(
   <Provider store={store}>
