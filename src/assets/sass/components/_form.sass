@@ -1,3 +1,11 @@
+select
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+
+select::-ms-expand
+    display: none
+
 .new_book
     margin-top: 42px
     border-top: 2px solid $grey
@@ -17,27 +25,28 @@
 
         .control
             background: #fff
-            flex: 1
+            flex: 2
             height: 45px
-            border: 1px solud $grey
+            border: 1px solid $grey
             margin-right: 34px
             padding: 13px 16px
             border-radius: 4px
             outline: none
+            appearance: none
             -webkit-appearance: none
             -moz-appearance: none
-
+            -ms-appearance: none
         select.control
+            flex: 1
             position: relative
-            &:after
-                content: ''
-                position: absolute
-                right: 0px
-                top: 0px
-
-                width: 15px
-                height: 30px
-                background: red
+            width: 100%
+            background-image: url('./../../images/arrow.svg')
+            background-repeat: no-repeat
+            background-position: right 16px top 50%
+           
+                
+                
+                
         .button
             width: 184px
             background: $primaryColor
