@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { removeBook } from '../actions/index';
+import { removeBook, changeFilter } from '../actions/index';
 import Book from '../components/Book';
 
 const BooksList = ({ books, removeBook }) => {
@@ -40,15 +40,18 @@ const BooksList = ({ books, removeBook }) => {
 BooksList.propTypes = {
   books: PropTypes.arrayOf(PropTypes.instanceOf(Object)),
   removeBook: PropTypes.func,
+  changeFilter: PropTypes.func,
 };
 
 BooksList.defaultProps = {
   books: [],
   removeBook: null,
+  changeFilter: null,
 };
 
 const mapDispatchToProps = (dispatch) => ({
   removeBook: (id) => dispatch(removeBook(id)),
+  changeFilter: (filter) => dispatch(changeFilter(filter)),
 });
 const mapStateToProps = (state) => ({
   books: state.books,
