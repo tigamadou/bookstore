@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import './index.css';
+import './assets/sass/app.sass';
 import App from './components/App';
 import storeReducer from './reducers/index';
 import { createBook } from './actions/index';

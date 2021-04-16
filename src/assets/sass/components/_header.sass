@@ -1,0 +1,48 @@
+.header
+    background: $white
+    border-bottom: solid 1px $grey
+    
+    .navbar
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 95px
+        .navbar_left
+            display: flex
+            justify-content: flex-start
+            align-items: center
+            .navbar_title
+                font-size: 30px
+                font-weight: bold
+                font-stretch: normal
+                font-style: normal
+                line-height: normal
+                letter-spacing: normal
+                color: $primaryColor
+                margin-right: 47px
+            .navbar_nav
+                .navbar_nav_menu
+                    display: flex
+                    justify-content: flex-start
+                    align-items: center
+                    list-style-type: none
+                    .navbar_nav_menu_link
+                        margin-right: 41px                        
+                        font-size: 13px
+                        font-weight: normal
+                        font-stretch: normal
+                        font-style: normal
+                        line-height: normal
+                        letter-spacing: 1.9px
+                        cursor: pointer
+                        text-decoration: none
+                        color: $grey
+                        &.active
+                            color: $dark
+                        &:active
+                            color: $primaryColor
+        .navbar_right
+            .header_user
+                width: 45px
+                height: 45px
+                border: solid 1px $grey
