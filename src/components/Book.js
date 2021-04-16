@@ -1,4 +1,5 @@
 import React from 'react';
+import { CircularProgressbar } from 'react-circular-progressbar';
 
 const Book = (book) => {
   const {
@@ -24,7 +25,7 @@ const Book = (book) => {
       <div className="book_details">
         <div className="book_progress">
           <div className="book_progress_chart">
-            chart
+            <CircularProgressbar value={64} maxValue={100} />
           </div>
           <div className="book_progress_details">
             <div className="book_progress_value">64%</div>
