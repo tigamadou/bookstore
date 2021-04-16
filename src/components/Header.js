@@ -1,4 +1,5 @@
 import React from 'react';
+import user from '../assets/images/user.svg';
 
 const Header = () => (
   <header className="header">
@@ -16,7 +17,7 @@ const Header = () => (
         </div>
         <div className="navbar_right">
           <div className="header_user">
-            User
+            <img src={user} alt="user" />
           </div>
         </div>
       </div>
