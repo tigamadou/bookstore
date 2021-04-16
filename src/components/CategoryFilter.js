@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 const categories = ['All', ...['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi']];
 const CategoryFilter = ({ filter, handleFilterChange }) => (
   <div className="category_filter">
+    <span>Category</span>
     <select
       value={filter}
       name="filter"
