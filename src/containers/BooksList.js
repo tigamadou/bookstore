@@ -4,10 +4,14 @@ import { connect } from 'react-redux';
 import { removeBook, changeFilter } from '../actions/index';
 import Book from '../components/Book';
 
-const BooksList = ({ books, removeBook }) => {
+const BooksList = ({ books, removeBook, changeFilter }) => {
   const handleRemoveBook = (book) => {
     removeBook(book);
   };
+
+  const handleFilterChange = (e) => {
+    changeFilter(e.target.value)
+  }
 
   return (
 
