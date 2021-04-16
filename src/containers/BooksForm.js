@@ -6,7 +6,7 @@ import { createBook } from '../actions/index';
 const BooksForm = ({ createBook }) => {
   const [title, setTitle] = useState('');
   const [category, setCatagory] = useState('');
-  const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+  const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi', 'Economy'];
 
   const handleChange = (e) => {
     setTitle(e.target.value);
