@@ -28,18 +28,18 @@ const Book = (book) => {
           </div>
           <div className="book_progress_details">
             <div className="book_progress_value">64%</div>
-            <div className="book_progress_text">COMPLETED</div>
+            <div className="book_progress_text">Completed</div>
           </div>
         </div>
         <div className="book_chapter">
-          <div className="title">
+          <div className="bootk_chapter_text">
             Current chapter
           </div>
-          <div className="value">
+          <div className="bootk_chapter_value">
             Chapter 17
           </div>
-          <div className="update">
-            <button type="button" className="update_progress">Update progress</button>
+          <div className="book_chapter_update">
+            <button type="button" className="button">Update progress</button>
           </div>
         </div>
       </div>
