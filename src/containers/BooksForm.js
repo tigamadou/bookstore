@@ -6,7 +6,7 @@ import { createBook } from '../actions/index';
 const BooksForm = ({ createBook }) => {
   const [title, setTitle] = useState('');
   const [category, setCatagory] = useState('');
-  const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+  const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi', 'Economy'];
 
   const handleChange = (e) => {
     setTitle(e.target.value);
@@ -30,19 +30,24 @@ const BooksForm = ({ createBook }) => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={title}
-          placeholder="Title"
-          onChange={handleChange}
-        />
-        <select value={category} onChange={onCategoryChange}>
-          {categories.map((cat) => <option value={cat} key={cat}>{cat}</option>)}
-        </select>
-        <button type="submit">Save Book</button>
-      </form>
+    <div className="container">
+      <div className="new_book">
+        <div className="label">ADD NEW BOOK</div>
+        <form onSubmit={handleSubmit} className="new_book_form">
+          <input
+            type="text"
+            value={title}
+            placeholder="Title"
+            onChange={handleChange}
+            className="control"
+            id="text"
+          />
+          <select value={category} onChange={onCategoryChange} className="control">
+            {categories.map((cat) => <option value={cat} key={cat}>{cat}</option>)}
+          </select>
+          <button type="submit" className="button">Add Book</button>
+        </form>
+      </div>
     </div>
   );
 };

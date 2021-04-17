@@ -1,18 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import './index.css';
+import './assets/styles/app.scss';
 import App from './components/App';
 import storeReducer from './reducers/index';
 import { createBook } from './actions/index';
 
 const store = storeReducer();
 
-const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi', 'Economy'];
 
-for (let i = 0; i < categories.length; i += 1) {
-  store.dispatch(createBook({ id: Date.now() + i, title: `Book ${i + 1}`, category: categories[i] }));
-}
+store.dispatch(createBook({ id: Date.now(), title: 'The Hunger Games', category: categories[0] }));
+store.dispatch(createBook({ id: Date.now() + 1, title: 'Dune', category: categories[6] }));
+store.dispatch(createBook({ id: Date.now() + 2, title: 'Capital in the Twenty-First Century', category: categories[7] }));
 
 ReactDOM.render(
   <Provider store={store}>
