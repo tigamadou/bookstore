@@ -1,17 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import './assets/styles/app.scss';
+import App from './components/App';
+import storeReducer from './reducers/index';
+import { createBook } from './actions/index';
+
+const store = storeReducer();
+
+const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi', 'Economy'];
+
+store.dispatch(createBook({ id: Date.now(), title: 'The Hunger Games', category: categories[0] }));
+store.dispatch(createBook({ id: Date.now() + 1, title: 'Dune', category: categories[6] }));
+store.dispatch(createBook({ id: Date.now() + 2, title: 'Capital in the Twenty-First Century', category: categories[7] }));
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </Provider>,
+  document.getElementById('root'),
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

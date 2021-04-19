@@ -1,0 +1,48 @@
+
+@import "variables";
+@import "components/header";
+@import "components/book";
+@import "components/form";
+@import "components/category_filter";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: $mainFont;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: $light;
+  margin: 0;
+  padding: 0 0 100px 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+}
