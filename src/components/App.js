@@ -1,14 +1,14 @@
 import React from 'react';
-import BooksList from '../containers/BooksList';
-import BooksForm from '../containers/BooksForm';
+import List from '../containers/BooksList';
 import Header from './Header';
+import Form from '../containers/BooksForm';
 
-const App = () => (
-  <div>
-    <Header />
-    <BooksList />
-    <BooksForm />
-  </div>
-);
-
-export default App;
+export default function App() {
+  return (
+    <div>
+      <Header />
+      <List />
+      <Form />
+    </div>
+  );
+}
