@@ -1,14 +1,16 @@
-.book_card {
+.card {
   background: $white;
   padding: 32px 27px;
   margin-bottom: 15px;
   border: 1px solid $grey;
-  display: flex;
-  justify-content: space-between;
-
-  .book_info {
+  
+  .card-content{
+    display: flex;
+    justify-content: space-between;
+  }
+  .info {
     .info_content {
-      .book_category {
+      .category {
         opacity: 0.5;
         font-size: 14px;
         font-weight: 700;
@@ -18,7 +20,7 @@
         letter-spacing: normal;
       }
 
-      .book_title {
+      .title {
         font-family: $mainFont;
         font-size: 2.2rem;
         font-weight: 700;
@@ -29,7 +31,7 @@
         margin-top: 3px;
       }
 
-      .book_author {
+      .author {
         color: $secondaryColor;
         margin: 4px 0 0;
         font-family: $mainFont;
@@ -42,7 +44,7 @@
       }
     }
 
-    .info_footer {
+    .footer {
       ul {
         display: flex;
         justify-content: flex-start;
@@ -64,13 +66,13 @@
     }
   }
 
-  .book_details {
+  .details {
     width: 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    .book_progress {
+    .leaning {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -87,7 +89,7 @@
         background: $grey;
       }
 
-      .book_progress_chart {
+      .leaning_chart {
         width: 90px;
         height: 90px;
         display: flex;
@@ -115,8 +117,8 @@
         }
       }
 
-      .book_progress_details {
-        .book_progress_value {
+      .leaning_details {
+        .leaning_value {
           font-family: 'Montserrat', serif;
           font-size: 32px;
           color: $dark;
@@ -127,7 +129,7 @@
           letter-spacing: normal;
         }
 
-        .book_progress_text {
+        .leaning_text {
           font-size: 14px;
           margin-top: 7px;
           opacity: 0.5;
@@ -135,7 +137,7 @@
       }
     }
 
-    .book_chapter {
+    .chapter {
       width: 50%;
 
       .bootk_chapter_text {
@@ -155,7 +157,7 @@
         margin-bottom: 23px;
       }
 
-      .book_chapter_update {
+      .chapter_update {
         .button {
           padding: 7px 19px;
           background: $primaryColor;

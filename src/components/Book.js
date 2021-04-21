@@ -5,60 +5,63 @@ import PropTypes from 'prop-types';
 const Book = ({
   id, title, category, handleRemoveBook,
 }) => (
-
-  <div className="book_card">
-    <div className="book_info">
-      <div className="info_content">
-        <div className="book_category">{category}</div>
-        <div className="book_title">{title}</div>
-        <div className="book_author">Author</div>
-      </div>
-      <div className="info_footer">
-        <ul>
-          <li><a href="/#">Comments</a></li>
-          <li><a href="/#" role="button" onClick={() => handleRemoveBook({ id })}>Remove</a></li>
-          <li><a href="/#">Edit</a></li>
-        </ul>
+  <>
+    <div className="card">
+      <div className="card-content">
+        <div className="info">
+          <div className="info_content">
+            <div>
+              <div className="category"><span>{ category }</span></div>
+              <div className="title"><span>{ title }</span></div>
+              <div className="author"><span>John Doe</span></div>
+            </div>
+          </div>
+          <div className="footer">
+            <ul>
+              <li><a href="/#">Comments</a></li>
+              <li><a href="/#" role="button" onClick={() => handleRemoveBook({ id })}>Remove</a></li>
+              <li><a href="/#">Edit</a></li>
+            </ul>
+          </div>
+        </div>
+        <div className="details">
+          <div className="leaning">
+            <div className="leaning_chart">
+              <div>
+                <CircularProgressbar value={57} maxValue={100} />
+              </div>
+            </div>
+            <div className="leaning_details">
+              <div className="leaning_value"><span>57 %</span></div>
+              <div className="leaning_text"><span>Completed</span></div>
+            </div>
+          </div>
+          <div className="chapter">
+            <div className="bootk_chapter_text"><span>Current chapter</span></div>
+            <div className="bootk_chapter_value"><span>Chapter 17</span></div>
+            <div className="chapter_update">
+              <button type="button" className="button">Update progress</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div className="book_details">
-      <div className="book_progress">
-        <div className="book_progress_chart">
-          <CircularProgressbar value={64} maxValue={100} />
-        </div>
-        <div className="book_progress_details">
-          <div className="book_progress_value">64%</div>
-          <div className="book_progress_text">Completed</div>
-        </div>
-      </div>
-      <div className="book_chapter">
-        <div className="bootk_chapter_text">
-          Current chapter
-        </div>
-        <div className="bootk_chapter_value">
-          Chapter 17
-        </div>
-        <div className="book_chapter_update">
-          <button type="button" className="button">Update progress</button>
-        </div>
-      </div>
-    </div>
-  </div>
+  </>
 
 );
 
-Book.propTypes = {
-  id: PropTypes.number,
-  title: PropTypes.string,
-  category: PropTypes.string,
-  handleRemoveBook: PropTypes.func,
+Book.defaultProps = {
+  title: '',
+  id: null,
+  handleRemoveBook: null,
+  category: 'All',
 };
 
-Book.defaultProps = {
-  id: null,
-  title: '',
-  category: 'All',
-  handleRemoveBook: null,
+Book.propTypes = {
+  title: PropTypes.string,
+  id: PropTypes.number,
+  handleRemoveBook: PropTypes.func,
+  category: PropTypes.string,
 };
 
 export default Book;
